@@ -1,16 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Grid & Flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Project Starter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./stylesheets/main.scss">
-</head>
+  <body>
+    <!--  Your HTML goes here-->
 
-<body>
-  <!--  Your HTML goes here-->
-  <h1>Welcome to WEB 2620!!!!!</h1>
-<script type="module" src="./javascripts/main.js"></script>
-</body>
+    <div class="nav">
+      <h3 class="logo">Marketing Site</h3>
+      <a href="">One</a>
+      <a href="" class="margin-right">Two</a>
+      <a href="">Three</a>
+      <a href="">Four</a>
+      <a href="">Five</a>
+      <a href="">Six</a>
+    </div>
+    <div class="jumbotron">
+      <div class="left-jumbotron">
+        <h1>Jumbotron</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquid perspiciatis aspernatur,
+          voluptatibus veritatis dignissimos tempora reiciendis quasi nulla amet nostrum assumenda hic, illo delectus
+          voluptatem, provident necessitatibus consectetur reprehenderit!
+        </p>
+        <button class="jumbo-button">Learn more</button>
+      </div>
+      <div class="right-jumbotron">
+        <div class="jumbo-card">
+          <img src="./images/executive1.jpg" alt="man in blue suit jacket" width="250px" height="200px" />
+          <div class="testimonial">
+            <h2 class="animated-header">Papy Olenga</h2>
+            <p>
+              2023 Utah Best Webdeveloper. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ipsa tempora,
+              accusantium, ipsam ducimus repellat at voluptas.
+            </p>
+          </div>
+        </div>
+        <div class="jumbo-card">
+          <img src="./images/executive2.jpg" alt="white man wearing suit" width="250px" height="200px" />
+          <div class="testimonial">
+            <h2 class="animated-header">James Baron</h2>
+            <p>
+              2021 Utah Best Webdeveloper. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ipsa tempora,
+              accusantium, ipsam ducimus repellat at voluptas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <h1 class="center">Our Newest Products</h1>
+      <div class="top-boxes-wrap">
+        <div class="photo">
+          <figure>
+            <img src="images/product1-230x300.png" alt="water melon juice" width="230" height="300" />
+            <figcaption>
+              <p>Water melon juice</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+        <div class="photo">
+          <figure>
+            <img src="images/product2-230x300.png" alt="big scampis" width="230" height="300" />
+            <figcaption>
+              <p>Big scampis</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+        <div class="photo">
+          <figure>
+            <img
+              src="images/product3-230x300.png"
+              alt="pancake slices topped with strawberry halves"
+              width="230"
+              height="300"
+            />
+            <figcaption>
+              <p>Pancake</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+        <div class="photo">
+          <figure>
+            <img src="images/product4-230x300.png" alt="peanut butter bottle" width="230" height="300" />
+            <figcaption>
+              <p>Peanut butter bottle</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+      </div>
+      <h3 class="block">Really bid specials this week on items.</h3>
+      <h1>Some Other Neat Products</h1>
+      <div class="neat-products">
+        <div class="photo">
+          <figure>
+            <img src="images/product1-230x300.png" alt="water melon juice" width="150" height="200" />
+            <figcaption>
+              <p>Nulla At Nulla Justo, Eget</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+        <div class="photo">
+          <figure>
+            <img src="images/product1-230x300.png" alt="water melon juice" width="150" height="200" />
+            <figcaption>
+              <p>Nulla At Nulla Justo, Eget</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+        <div class="photo">
+          <figure>
+            <img src="images/product1-230x300.png" alt="water melon juice" width="150" height="200" />
+            <figcaption>
+              <p>Nulla At Nulla Justo, Eget</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+
+        <div class="photo">
+          <figure>
+            <img src="images/product1-230x300.png" alt="water melon juice" width="150" height="200" />
+            <figcaption>
+              <p>Nulla At Nulla Justo, Eget</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+
+        <div class="photo">
+          <figure>
+            <img src="images/product1-230x300.png" alt="water melon juice" width="150" height="200" />
+            <figcaption>
+              <p>Nulla At Nulla Justo, Eget</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+
+        <div class="photo">
+          <figure>
+            <img src="images/product1-230x300.png" alt="water melon juice" width="150" height="200" />
+            <figcaption>
+              <p>Nulla At Nulla Justo, Eget</p>
+              <h4>$400</h4>
+            </figcaption>
+          </figure>
+          <button>Buy</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
 </html>

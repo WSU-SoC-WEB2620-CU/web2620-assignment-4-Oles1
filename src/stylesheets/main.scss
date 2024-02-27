@@ -1,1 +1,183 @@
-// Your styles go here
+/* General styling */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  /* Variables */
+  --body-backgr: #f0f8ff;
+  --navigation-backgr: #c1d0dd;
+  --jumbotron-backgr: #838f99;
+  --generic-padding: 0.8rem 0.8rem;
+  --body-width: 1200px;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+img {
+  display: block;
+  height: 300px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+body {
+  min-height: 100dvh;
+  max-width: var(--body-width);
+  margin: 0 auto;
+  background-color: var(--body-backgr);
+}
+
+/* CLASSES */
+.nav {
+  border: 2px solid black;
+  display: flex;
+  padding: var(--generic-padding);
+  background-color: var(--navigation-backgr);
+  gap: 1.2em;
+}
+.logo {
+  display: inline-block;
+  margin-right: 1em;
+}
+.margin-right {
+  margin-right: auto;
+}
+.nav > a {
+  text-decoration: none;
+  display: block;
+  color: blue;
+  font-weight: bolder;
+}
+.jumbotron {
+  background-color: var(--jumbotron-backgr);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 16rem;
+  overflow: hidden;
+}
+.left-jumbotron {
+  border: 2px solid orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: var(--generic-padding);
+}
+
+.right-jumbotron {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.jumbo-card {
+  border: 2px solid green;
+  display: flex;
+  font-size: calc(0.6em + 15%);
+}
+.jumbo-card > img {
+  border: 2px solid green;
+  display: flex;
+  object-fit: cover;
+  animation: twisty 3s 3 reverse ease-out;
+}
+@keyframes twisty {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.animated-header {
+  animation: flippy 5s 3 reverse ease-out;
+}
+@keyframes flippy {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+.testimonial {
+  padding: 0.8rem 0.2rem;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.testimonial p {
+  overflow: hidden;
+}
+.center {
+  text-align: center;
+}
+.main {
+  border: 2px solid rebeccapurple;
+  width: 80%;
+  margin-inline: auto;
+}
+.margin-top-auto {
+  margin-top: auto;
+}
+.top-boxes-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: none;
+  //   border: 4px solid blue;
+  justify-content: center;
+}
+.photo figure {
+  /* This one might be useful if we do media queries and we want to reverse things at some break points.  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.top-boxes-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  border: 3px solid orange;
+  justify-content: space-between;
+}
+.photo {
+  border: 2px solid red;
+  width: min(100%, 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.photo img {
+  max-width: 100%;
+  //   display: block;
+  height: auto;
+}
+.block {
+  display: block;
+}
+.neat-products {
+  border: 3px double black;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+}
+.neat-products p {
+  font-size: 0.8rem;
+}
+/* UTILITIES */
+button {
+  background-color: aqua;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+}
