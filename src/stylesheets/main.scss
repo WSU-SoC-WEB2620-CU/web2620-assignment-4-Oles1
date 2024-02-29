@@ -10,6 +10,8 @@ html {
   --jumbotron-backgr: #838f99;
   --generic-padding: 0.8rem 0.8rem;
   --body-width: 1200px;
+  --border-color: rgb(48, 40, 40);
+  --borderedClass-background: #a0bad0;
 }
 *,
 ::before,
@@ -19,29 +21,46 @@ html {
   padding: 0;
   font-family: inherit;
 }
-img {
-  display: block;
-  height: 300px;
-}
-
-figcaption {
-  text-align: center;
-}
 
 body {
   min-height: 100dvh;
   max-width: var(--body-width);
   margin: 0 auto;
   background-color: var(--body-backgr);
+  display: grid;
+  grid-auto-rows: auto;
+}
+footer {
+  background-color: var(--navigation-backgr);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+img {
+  border: 2px solid gray;
+  padding: 0.2em;
 }
 
 /* CLASSES */
+.neat-products figcaption {
+  text-align: center;
+}
+
 .nav {
-  border: 2px solid black;
+  // border: 2px solid black;
   display: flex;
   padding: var(--generic-padding);
   background-color: var(--navigation-backgr);
   gap: 1.2em;
+}
+footer .nav {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 0 0 0;
+}
+
+footer .left-footer {
+  padding: 2em 1em 2em 7.5em;
 }
 .logo {
   display: inline-block;
@@ -64,7 +83,7 @@ body {
   overflow: hidden;
 }
 .left-jumbotron {
-  border: 2px solid orange;
+  // border: 2px solid orange;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,14 +96,15 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .jumbo-card {
-  border: 2px solid green;
+  // border: 2px solid green;
   display: flex;
   font-size: calc(0.6em + 15%);
 }
+
 .jumbo-card > img {
-  border: 2px solid green;
-  display: flex;
-  object-fit: cover;
+  // border: 2px solid green;
+  display: block;
+  height: 300px;
   animation: twisty 3s 3 reverse ease-out;
 }
 @keyframes twisty {
@@ -122,13 +142,23 @@ body {
   text-align: center;
 }
 .main {
-  border: 2px solid rebeccapurple;
+  // border: 2px solid rebeccapurple;
   width: 80%;
   margin-inline: auto;
 }
 .margin-top-auto {
   margin-top: auto;
 }
+.neat-products {
+  // border: 3px double black;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+.neat-products p {
+  font-size: 0.8rem;
+}
+
 .top-boxes-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -140,18 +170,19 @@ body {
   /* This one might be useful if we do media queries and we want to reverse things at some break points.  */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  //   justify-content: space-between;
+  //   align-content: space-between;
 }
 
 .top-boxes-wrap {
   display: flex;
   flex-flow: row wrap;
-  border: 3px solid orange;
+  // border: 3px solid orange;
   justify-content: space-between;
+  padding: 1em 0;
 }
 .photo {
-  border: 2px solid red;
+  // border: 2px solid red;
   width: min(100%, 200px);
   display: flex;
   flex-direction: column;
@@ -163,17 +194,55 @@ body {
   //   display: block;
   height: auto;
 }
+
+.top-products-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.top-product-item img {
+  width: min(70%, 200px); /* controls the size of the image within the .top-product-item grid cell  */
+  height: 100px;
+}
+
+.top-product-item .photo {
+  width: min(100%, 400px); /* This is to help get the .photo content fill up the whole grid cell */
+}
+
+.top-product-item figure {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.top-product-item figcaption {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0.5em;
+}
+.top-product-item p {
+  font-size: 0.8rem;
+  text-align: left;
+}
 .block {
   display: block;
 }
-.neat-products {
-  border: 3px double black;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.5rem;
+
+.border-top {
+  border: 2px solid var(--border-color);
 }
-.neat-products p {
-  font-size: 0.8rem;
+.border-bottom {
+  border: 2px solid var(--border-color);
+}
+.bordered {
+  border: 2px solid var(--border-color);
+  padding: 0.7em;
+  background-color: var(--borderedClass-background);
+  margin: 1em 0;
+}
+.padded {
+  padding: 0.4em 0;
 }
 /* UTILITIES */
 button {
